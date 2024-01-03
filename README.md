@@ -1,4 +1,4 @@
-# gobang
+# zzx
 
 ## Project setup
 ```
