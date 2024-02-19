@@ -1,7 +1,6 @@
 .DS_Store
 node_modules
-# /dist
-# 部署123
+/dist
 
 # local env files
 .env.local

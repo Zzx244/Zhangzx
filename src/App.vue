@@ -23,7 +23,13 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #409eff;
+  background-color: #e5eaf3;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 </style>
