@@ -56,47 +56,51 @@
 
 <script setup>
 import { csCode, csSpanCode } from "@/components/codeShow";
-import { defineComponent } from "vue"
+import { defineComponent } from "vue";
 defineComponent({
-  'cs-code':csCode,
-  'cs-spanCode':csSpanCode
-})
-const code1 =`for (let a = 0; a < list.value[i].length - 4; a++) {
-  let aArr = [a, a + 1, a + 2, a + 3, a + 4];
+  "cs-code": csCode,
+  "cs-spanCode": csSpanCode,
+});
+const code1 = `for (let a = 0; a < list.value[i].length - 4; a++) {
+  let aArr = [];
   for (let number = 0; number < 5; number++) {
-      arr.push(list.value[i][aArr[number]]);
-    }
+    aArr.push(a + number);
+    arr.push(list.value[i][aArr[number]]);
+  }
 }`;
 const code2 = `for (let number = 0; number < 5; number++) {
+  aArr.push(a + number);
   arr.push(list.value[aArr[number]][j]);
 }`;
 const code3 = `for (let b = list.value[i].length - 1; b > 3; b--) {
-  let bArr = [b, b - 1, b - 2, b - 3, b - 4];
+  let bArr = [];
   for (let number = 0; number < 5; number++) {
+    bArr.push(b - number);
     arr.push(list.value[aArr[number]][bArr[number]]);
   }
 }`;
 const code4 = `for (let b = 0; b < list.value[i].length - 4; b++) {
-  let bArr = [b, b + 1, b + 2, b + 3, b + 4];
+  ......
+  bArr.push(b + number);
   ......
 }`;
 const code5 = `if (array.every((res) => res === 'X'||'O') {
   setTimeout(() => victory.value = true, 700);
 }`;
 const ruleImg = [
-  {src:require('../../../assets/codeShow/codeShow1.png')},
-  {src:require('../../../assets/codeShow/codeShow2.png')},
-  {src:require('../../../assets/codeShow/codeShow3.png')},
-]
+  { src: require("../../../assets/codeShow/codeShow1.png") },
+  { src: require("../../../assets/codeShow/codeShow2.png") },
+  { src: require("../../../assets/codeShow/codeShow3.png") },
+];
 </script>
 
 <style lang="less">
-.carousel{
+.carousel {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.el-carousel{
+.el-carousel {
   width: 310px;
 }
 </style>

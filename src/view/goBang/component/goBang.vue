@@ -215,25 +215,29 @@ const rule = (i, j) => {
     arr = [];
   };
   for (let a = 0; a < list.value[i].length - 4; a++) {
-    let aArr = [a, a + 1, a + 2, a + 3, a + 4];
+    let aArr = [];
     for (let number = 0; number < 5; number++) {
+      aArr.push(a + number);
       arr.push(list.value[i][aArr[number]]);
     }
     ruleArr(arr, i, aArr);
     for (let number = 0; number < 5; number++) {
+      aArr.push(a + number);
       arr.push(list.value[aArr[number]][j]);
     }
     ruleArr(arr, aArr, j);
     for (let b = 0; b < list.value[i].length - 4; b++) {
-      let bArr = [b, b + 1, b + 2, b + 3, b + 4];
+      let bArr = [];
       for (let number = 0; number < 5; number++) {
+        bArr.push(b + number);
         arr.push(list.value[aArr[number]][bArr[number]]);
       }
       ruleArr(arr, aArr, bArr);
     }
     for (let b = list.value[i].length - 1; b > 3; b--) {
-      let bArr = [b, b - 1, b - 2, b - 3, b - 4];
+      let bArr = [];
       for (let number = 0; number < 5; number++) {
+        bArr.push(b - number);
         arr.push(list.value[aArr[number]][bArr[number]]);
       }
       ruleArr(arr, aArr, bArr);
@@ -254,6 +258,7 @@ const rule = (i, j) => {
 //     console.log("横轴=>", y, a);
 //   }
 // };
+
 //显示胜利棋子
 const victoryArr = ref([]);
 const isHighlihjt = (i, j) => {

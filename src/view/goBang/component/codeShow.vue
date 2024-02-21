@@ -17,6 +17,9 @@
           <el-tab-pane label="八爪鱼校验">正在开发......</el-tab-pane>
         </el-tabs>
       </el-collapse-item>
+      <el-collapse-item title="源码" name="3">
+        仓库：<el-button type="primary" text @click="open()">https://github.com/Zzx244/Zhangzx</el-button>
+      </el-collapse-item>
     </el-collapse>
   </el-drawer>
 </template>
@@ -28,6 +31,9 @@ import { defineComponent } from "vue";
 defineComponent({
   'cs-title':csTitle,
 })
+const open = ()=>{
+  window.open('https://github.com/Zzx244/Zhangzx')
+}
 </script>
 
 <style lang="less" scoped>
